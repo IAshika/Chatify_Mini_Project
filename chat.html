@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💬 Chatify | Mini Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <div class="chatify-container">
+      
+        <aside class="sidebar">
+            <header>
+                <nav>
+                    <div class="left">
+                        <img src="./assets/Logo.png" alt="Logo" width="30" height="30">
+                        <h1>Chatify</h1>
+                    </div>
+                    <div class="chat-icons">
+ 
+     
+    <div class="nav-chat-icons">
+
+    <button class="nav-icon-btn" onclick="openCamera()">
+        <img src="./assets/camera-01.svg" alt="Camera" width="20" height="20">
+    </button>
+
+   <div class="menu-wrapper">
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </button>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li onclick="menuAction('View Profile')">View Profile</li>
+            <li onclick="menuAction('Edit')">Edit</li>
+            <li onclick="menuAction('Clear Chat')">Clear Chat</li>
+            <li onclick="menuAction('Delete Contact')">Delete Contact</li>
+        </ul>
+    </div>
+</div>
+
+
+
+</div>
+
+                </nav>
+                <div class="container">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="form-control search-input" placeholder="Search...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+                <div class="buttons">
+                        <a href="./chat.html"><button>Chats</button></a>
+                        <a href="./favorite.html"><button>Favs</button></a>
+                        <a href="./quickchat.html"><button>Q-Chats</button></a>
+                        <a href="./all.html"><button>All</button></a>
+                </div>
+            </header>
+
+            <section class="contacts">
+                <h3>Contacts</h3>
+                <hr>
+                <a href="#ashika" class="contact"><img src="./assets/1.jpg" width="30" height="30" alt=""> Ashika</a>
+                <a href="#diya" class="contact"><img src="./assets/2.jpg" width="30" height="30" alt=""> Diya</a>
+                <a href="#meera" class="contact"><img src="./assets/3.jpeg" width="30" height="30" alt=""> Meera</a>
+                <a href="#appa" class="contact"><img src="./assets/Ds.jpeg" width="30" height="30" alt=""> Appa</a>
+                <a href="#arjun" class="contact"><img src="./assets/Boy-1.webp" width="30" height="30" alt=""> Arjun</a>
+                <a href="#amma" class="contact"><img src="./assets/mom.webp" width="30" height="30" alt=""> Amma</a>
+                <a href="#kavin" class="contact"><img src="./assets/boy-2.jpg" width="30" height="30" alt=""> Kavin</a>
+                <a href="#anisha" class="contact"><img src="./assets/boy-3.jpg" width="30" height="30" alt="">
+                    Anisha</a>
+            </section>
+        </aside>
+        
+        <main class="chat-window">
+            <div class="no-chat" id="no-chat">
+                <img src="./assets/chat.png" alt="Chat Logo" width="120">
+                <p>Select a chat to start messaging</p>
+            </div>
+            <section class="chat-screen" id="ashika">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/1.jpg" class="profile-img">
+                        <div class="user-text">
+                            <h3>Ashika</h3>
+                            <p>online</p>
+                        </div>
+                    </div>
+<div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+    <div class="menu-wrapper">
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </button>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li onclick="menuAction('View Profile')">View Profile</li>
+            <li onclick="menuAction('Edit')">Edit Message</li>
+            <li onclick="menuAction('Copy')">Copy Message</li>
+            <li onclick="menuAction('share')">Share Profile</li>
+            <li onclick="menuAction('Settings')">Settings</li>
+            <li onclick="menuAction('Mute')">Mute</li>
+            <li onclick="menuAction('Block')">Block</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>Hey there 👋<br><span>07:05 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Hi!!<br><span>07:10 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>What are you doing?<br><span>08:50 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Just finishing my assignment <br><span>09:02 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Same! It's taking forever <br><span>09:04 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Coffee break after 7?<br><span>09:06 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Sure <br><span>09:07 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Deal <br><span>09:08 AM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+                    <div class="emoji-box" style="display:none;">
+                         <span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+
+
+                </footer>
+            </section>
+
+            <section class="chat-screen" id="diya">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/2.jpg" class="profile-img">
+                        <div class="user-text">
+                            <h3>Diya</h3>
+                            <p>online</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </button>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li onclick="menuAction('View Profile')">View Profile</li>
+            <li onclick="menuAction('Edit')">Edit Message</li>
+            <li onclick="menuAction('Copy')">Copy Message</li>
+            <li onclick="menuAction('share')">Share Profile</li>
+            <li onclick="menuAction('Settings')">Settings</li>
+            <li onclick="menuAction('Mute')">Mute</li>
+            <li onclick="menuAction('Block')">Block</li>
+        </ul>
+    </div>
+</div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>Hey!<br><span>08:30 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Hello!<br><span>08:31 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Did you watch the match last night? <br><span>08:45 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Yeah!! That last goal was crazy <br><span>08:46 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>I know right unbelievable!<br><span>08:47 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>We should watch together next time <br><span>08:48 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Done! Popcorn's on me <br><span>08:49 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Haha deal <br><span>08:50 PM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+
+                    <div class="emoji-box" style="display:none;">
+                         <span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+
+                </footer>
+            </section>
+
+            <!-- Meera -->
+            <section class="chat-screen" id="meera">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/3.jpeg" class="profile-img">
+                        <div class="user-text">
+                            <h3>Meera</h3>
+                            <p>offline</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li onclick="menuAction('View Profile')">View Profile</li>
+                <li onclick="menuAction('Edit')">Edit Message</li>
+                <li onclick="menuAction('Copy')">Copy Message</li>
+                <li onclick="menuAction('share')">Share Profile</li>
+                <li onclick="menuAction('Settings')">Settings</li>
+                <li onclick="menuAction('Mute')">Mute</li>
+                <li onclick="menuAction('Block')">Block</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message sent">
+                        <p>Hi dude!<br><span>09:30 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Hey, did you finish the project report?<br><span>10:00 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Almost done, just checking formatting.<br><span>10:02 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Can you send it when you're done? <br><span>10:04 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Sure, give me 10 minutes.<br><span>10:05 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Thanks! You're a lifesaver 😅<br><span>10:06 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Haha anytime 😄<br><span>10:07 AM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+
+                    <div class="emoji-box" style="display:none;">
+                        <span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button><input type="text" class="msgInput"
+                        placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+
+                </footer>
+            </section>
+
+            <!-- Appa -->
+            <section class="chat-screen" id="appa">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/Ds.jpeg" class="profile-img">
+                        <div class="user-text">
+                            <h3>Appa</h3>
+                            <p>online</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li onclick="menuAction('View Profile')">View Profile</li>
+                <li onclick="menuAction('Edit')">Edit Message</li>
+                <li onclick="menuAction('Copy')">Copy Message</li>
+                <li onclick="menuAction('share')">Share Profile</li>
+                <li onclick="menuAction('Settings')">Settings</li>
+                <li onclick="menuAction('Mute')">Mute</li>
+                <li onclick="menuAction('Block')">Block</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>Hello dear<br><span>07:20 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Hii paa<br><span>07:23 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>How was your class today?<br><span>07:30 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>It went well, paa! We learned JavaScript today.<br><span>07:31 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>That's nice! Practicing daily?<br><span>07:32 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Yes, I'm building small projects too <br><span>07:33 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Very good. Keep it up 👍<br><span>07:34 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Thanks paa 😊<br><span>07:35 PM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+                    <div class="emoji-box" style="display:none;">
+                        <span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+
+                </footer>
+            </section>
+
+            <section class="chat-screen" id="arjun">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/Boy-1.webp" class="profile-img">
+                        <div class="user-text">
+                            <h3>Arjun</h3>
+                            <p>offline</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li onclick="menuAction('View Profile')">View Profile</li>
+                <li onclick="menuAction('Edit')">Edit Message</li>
+                <li onclick="menuAction('Copy')">Copy Message</li>
+                <li onclick="menuAction('share')">Share Profile</li>
+                <li onclick="menuAction('Settings')">Settings</li>
+                <li onclick="menuAction('Mute')">Mute</li>
+                <li onclick="menuAction('Block')">Block</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>Oi<br><span>07:30 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Yes<br><span>08:30 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Hey, how was your day? <br><span>08:31 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Pretty good! Yours?<br><span>08:32 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Busy but fun haha <br><span>08:33 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Did you eat dinner yet?<br><span>08:34 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Not yet, still cooking <br><span>08:35 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Don't burn the kitchen this time <br><span>08:36 PM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+                    <div class="emoji-box" style="display:none;">
+<span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+
+                </footer>
+            </section>
+
+            <section class="chat-screen" id="amma">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/mom.webp" class="profile-img">
+                        <div class="user-text">
+                            <h3>Amma</h3>
+                            <p>offline</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li onclick="menuAction('View Profile')">View Profile</li>
+                <li onclick="menuAction('Edit')">Edit Message</li>
+                <li onclick="menuAction('Copy')">Copy Message</li>
+                <li onclick="menuAction('share')">Share Profile</li>
+                <li onclick="menuAction('Settings')">Settings</li>
+                <li onclick="menuAction('Mute')">Mute</li>
+                <li onclick="menuAction('Block')">Block</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>PaPa<br><span>08:00 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>What's up ma?<br><span>08:14 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Did you eat breakfast, dear? <br><span>08:15 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Yes, I had idli and chutney <br><span>08:16 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Good! Don't skip lunch, okay?<br><span>08:17 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Sure, maa ❤️<br><span>08:18 AM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Take your water bottle too when you go out <br><span>08:19 AM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Okay, I will <br><span>08:20 AM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+                    <div class="emoji-box" style="display:none;">
+<span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+                </footer>
+            </section>
+
+            <section class="chat-screen" id="kavin">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/boy-2.jpg" class="profile-img">
+                        <div class="user-text">
+                            <h3>Kavin</h3>
+                            <p>online</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li onclick="menuAction('View Profile')">View Profile</li>
+                <li onclick="menuAction('Edit')">Edit Message</li>
+                <li onclick="menuAction('Copy')">Copy Message</li>
+                <li onclick="menuAction('share')">Share Profile</li>
+                <li onclick="menuAction('Settings')">Settings</li>
+                <li onclick="menuAction('Mute')">Mute</li>
+                <li onclick="menuAction('Block')">Block</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>Bro, gym today? 💪<br><span>06:00 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Feeling lazy bro 😴<br><span>06:01 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Come on, don't skip again <br><span>06:02 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Fine fine, 6:30 PM okay?<br><span>06:03 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Perfect! I'll be there early <br><span>06:04 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Alright, see you there <br><span>06:05 PM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+                    <div class="emoji-box" style="display:none;">
+                        <span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                   
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+                </footer>
+            </section>
+            <section class="chat-screen" id="anisha">
+                <header class="chat-header">
+                    <div class="user-info">
+                        <img src="./assets/boy-3.jpg" class="profile-img">
+                        <div class="user-text">
+                            <h3>Anisha</h3>
+                            <p>online</p>
+                        </div>
+                    </div><div class="chat-icons">
+    <button class="call-btn" onclick="startCall()">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+
+    <div class="menu-wrapper">
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <ul>
+                <li onclick="menuAction('View Profile')">View Profile</li>
+                <li onclick="menuAction('Edit')">Edit Message</li>
+                <li onclick="menuAction('Copy')">Copy Message</li>
+                <li onclick="menuAction('share')">Share Profile</li>
+                <li onclick="menuAction('Settings')">Settings</li>
+                <li onclick="menuAction('Mute')">Mute</li>
+                <li onclick="menuAction('Block')">Block</li>
+            </ul>
+        </div>
+    </div>
+</div>
+                </header>
+
+                <div class="chat-body">
+                    <div class="message received">
+                        <p>Hey there 👋<br><span>06:00 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Hi! What's up?<br><span>06:01 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Hey! Are you free this weekend? <br><span>06:10 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Yeah, mostly! What's up?<br><span>06:11 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Let's go shopping or maybe a café? 🛍️☕<br><span>06:12 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Ooo yes! I need a break <br><span>06:13 PM</span></p>
+                    </div>
+                    <div class="message received">
+                        <p>Perfect, I'll plan something <br><span>06:14 PM</span></p>
+                    </div>
+                    <div class="message sent">
+                        <p>Can't wait! <br><span>06:15 PM</span></p>
+                    </div>
+                </div>
+                <footer class="chat-footer">
+                    <div class="emoji-box" style="display:none;">
+                        <span>😀</span> <span>😃</span> <span>😄</span> <span>😁</span> <span>😆</span> <span>😅</span>
+                        <span>😂</span> <span>🤣</span> <span>😊</span> <span>😇</span> <span>🙂</span> <span>🙃</span>
+                        <span>😉</span> <span>😌</span> <span>😍</span> <span>🥰</span> <span>😘</span> <span>😗</span>
+                        <span>😙</span> <span>😚</span> <span>😋</span> <span>😛</span> <span>😜</span> <span>😝</span>
+                        <span>🤗</span> <span>🤭</span> <span>🤫</span> <span>🤔</span> <span>🤨</span> <span>😐</span>
+                        <span>😑</span> <span>😶</span> <span>🙄</span> <span>😏</span> <span>😣</span> <span>😥</span>
+                        <span>😮‍💨</span> <span>😮</span> <span>😯</span> <span>😲</span> <span>🥺</span>
+                        <span>😢</span> <span>😭</span> <span>❤️</span> <span>🩷</span> <span>🧡</span> <span>💛</span>
+                        <span>💚</span> <span>💙</span> <span>🩵</span> <span>💜</span> <span>🖤</span> <span>🩶</span>
+                        <span>🤍</span> <span>🤎</span> <span>❤️‍🔥</span> <span>❤️‍🩹</span> <span>💔</span>
+                        <span>❣️</span> <span>💕</span> <span>💞</span> <span>💓</span> <span>💗</span> <span>💖</span>
+                        <span>💘</span> <span>💝</span> <span>💐</span> <span>🌷</span> <span>🪷</span> <span>🌹</span>
+                        <span>🥀</span> <span>🌺</span> <span>🌸</span> <span>☃️</span> <span>⛄️</span> <span>🌬</span>
+                        <span>💨</span> <span>💧</span> <span>💦</span> <span>🫧</span> <span>☔️</span> <span>☂️</span>
+                    </div>
+
+                    <button class="emojiBtn">😊</button>
+                    <input type="text" class="msgInput" placeholder="Type a message...">
+                    <button class="sendBtn">Send</button>
+
+                </footer>
+            </section>
+
+        </main>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💬 Chatify | Mini Project</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      overflow: hidden;
+      position: relative;
+      background: url('./assets/glass-morphism-effect-transparent-frosted-acrylic-online-chart-gold-gradient-circles-black-blue-background-realistic-glassmorphism-matte-plexiglass-shape-vector_190776-517\ \(1\).avif') no-repeat center center/cover;
+      background-size: cover;
+      animation: zoomBg 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomBg {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(5px);
+      z-index: 0;
+    }
+
+    .orb {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      filter: blur(150px);
+      opacity: 0.6;
+      animation: float 10s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    .orb:nth-child(1) {
+      top: 10%;
+      left: 15%;
+      background: #00c6ff;
+      animation-delay: 0s;
+    }
+
+    .orb:nth-child(2) {
+      bottom: 10%;
+      right: 20%;
+      background: #ff00c8;
+      animation-delay: 3s;
+    }
+
+    .orb:nth-child(3) {
+      top: 30%;
+      right: 25%;
+      background: #00ffcc;
+      animation-delay: 6s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 2.2rem;
+      opacity: 0.8;
+      animation: floatEmoji 6s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    @keyframes floatEmoji {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-25px) rotate(10deg); }
+    }
+
+    .emoji:nth-child(4) { top: 15%; left: 10%; animation-delay: 0s; }
+    .emoji:nth-child(5) { top: 20%; right: 12%; animation-delay: 1s; }
+    .emoji:nth-child(6) { bottom: 15%; left: 18%; animation-delay: 2s; }
+    .emoji:nth-child(7) { bottom: 20%; right: 15%; animation-delay: 3s; }
+    .emoji:nth-child(8) { top: 50%; left: 45%; animation-delay: 4s; }
+
+    .card {
+      position: relative;
+      z-index: 3;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 3rem 4rem;
+      border-radius: 25px;
+      text-align: center;
+      backdrop-filter: blur(25px);
+      box-shadow: 0 0 50px rgba(0, 198, 255, 0.3);
+      animation: slideUp 1.2s ease-out;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #d7f3ff;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff6a00, #ee0979, #0072ff);
+      background-size: 200% 200%;
+      animation: rainbow 4s linear infinite, glowPulse 2s infinite;
+      box-shadow: 0 0 25px rgba(0, 198, 255, 0.7);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.9);
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 20px rgba(255,255,255,0.6); }
+      50% { box-shadow: 0 0 35px rgba(255,255,255,1); }
+      100% { box-shadow: 0 0 20px rgba(255,255,255,0.6); }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  
+  <div class="emoji">💬</div>
+  <div class="emoji">😊</div>
+  <div class="emoji">❤️</div>
+
+  <div class="card">
+    <h1>Welcome to Chatify 💬</h1>
+    <p>Modern,Fun,Connected - start your next conversation now!</p>
+    <a href="./chat.html" class="btn">Start Messaging</a>
+
+  </div>
+</body>
+</html>
